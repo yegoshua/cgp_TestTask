@@ -69,6 +69,10 @@ const ElementBox = ({
                 type="text"
                 placeholder="Enter conten for Element"
                 value={input}
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                }}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyPress={(e) => {
                   if (e.key === "Enter") {
